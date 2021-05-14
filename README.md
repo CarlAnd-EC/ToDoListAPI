@@ -29,16 +29,22 @@ Updated: 14/05/2021
 
 * Good usage of REST will be evaluated
 
-The application is deployed in an AWS instance using PM2:
+The application is deployed in an AWS EC2 instance using PM2 and NGINX as reverse proxy:
 
 2. Security Group:  
 Allow PORTS: 443 & 80 for connection from 0.0.0.0  
 Allow PORT 22 for for connection from your IP address  
 ![Security Group](./config/SecurityGroup.png)  
 
-3. Set a proxy pass using nginx. Nginx configuration:
+3. Proxypass NGINX configuration:
+![NGINX Config](./config/NGINX_config_1.png) 
+![NGINX Config](./config/NGINX_config_2.png)
 
-4. Screenshot of PM2 running:
-list and monitor
-
-5. IP Address & virtual domain (If you don´t have a domain, the application should be available via a virtual domain /etc/hosts)
+4. PM2 running:
+* list
+![PM2 Running 1](./config/PM2_running_list.png)  
+* monitor
+![PM2 Running 2](./config/PM2_running_monit.png)  
+5. 
+### Public IP Address: http://3.130.206.155:3000/
+### Domain: carlandescape.tk
