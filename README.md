@@ -1,32 +1,44 @@
-1.- Create an Express application to manage a TODO list
+# Basic To Do List API using an Express Server
 
-GET /todos
+### Author: Carlos Andrés Escalona Contreras 
+### Proposed by: Javier Solís
+Main file: ExpressServer.js  
+Created: 11/05/2021  
+Updated: 14/05/2021
 
-POST /todos
+## Installation
+### `git clone https://github.com/CarlosAEC-KS/ToDoListAPI`
 
-PUT  /todos/:id
+## Start
+### `npm run start`
 
-DELETE /todos:id
+## Testing
+### `npm run test`
 
-2.- Deploy the application in an AWS instance using pm2. Don´t forget the security groups:
+## Description
+* Express server listening to requests on port 3000.
 
-Allow 443, 80 for 0.0.0.0
-Allow 22 for your IP address
+1. Express application to manage a TODO list.
 
-3.- Set a proxy pass using nginx
-
-4.- If you don´t have a domain, the application should be available via a virtual domain /etc/hosts
+| Endpoint | Method | Description |
+|-|-|-|
+| /todos | GET |
+| /todos | POST |
+| /todos/:id | PUT |
+| /todos/:id | DELETE |
 
 * Good usage of REST will be evaluated
 
-Delivery format
+The application is deployed in an AWS instance using PM2:
 
-1.- Screenshot of Security Group:
+2. Security Group:  
+Allow PORTS: 443 & 80 for connection from 0.0.0.0  
+Allow PORT 22 for for connection from your IP address  
 ![Security Group](./config/SecurityGroup.png)  
-2.- Link to repository:
 
-3.- Nginx configuration
-4.- Screenshot of Pm2 running:
+3. Set a proxy pass using nginx. Nginx configuration:
+
+4. Screenshot of PM2 running:
 list and monitor
 
-5.- Ip Address & Virtual domain
+5. IP Address & virtual domain (If you don´t have a domain, the application should be available via a virtual domain /etc/hosts)
