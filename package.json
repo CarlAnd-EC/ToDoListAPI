@@ -1,0 +1,29 @@
+{
+  "name": "todolistapi_expressserver",
+  "version": "1.0.0",
+  "description": "Basic To Do List API using an Express Server",
+  "main": "ExpressServer.js",
+  "scripts": {
+    "test": "npx nodemon ExpressServer.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CarlosAEC-KS/ToDoListAPI.git"
+  },
+  "keywords": [
+    "API",
+    "Express"
+  ],
+  "author": "Carlos Andrés Escalona Contreras",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CarlosAEC-KS/ToDoListAPI/issues"
+  },
+  "homepage": "https://github.com/CarlosAEC-KS/ToDoListAPI#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
