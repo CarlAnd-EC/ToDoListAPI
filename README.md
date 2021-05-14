@@ -47,4 +47,4 @@ Allow PORT 22 for for connection from your IP address
 ![PM2 Running 2](./config/PM2_running_monit.png)  
 5. 
 ### Public IP Address: http://3.130.206.155:3000/
-### Domain: carlandescape.tk
+### Domain: http://carlandescape.tk
