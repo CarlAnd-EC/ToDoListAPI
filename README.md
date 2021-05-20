@@ -4,7 +4,7 @@
 ### Proposed by: Javier Solís
 Main file: ExpressServer.js  
 Created: 11/05/2021  
-Updated: 14/05/2021
+Updated: 20/05/2021
 
 ## Installation
 ### `git clone https://github.com/CarlosAEC-KS/ToDoListAPI`
@@ -30,7 +30,7 @@ Example of entry in JSON format:
 {
   "title":        "My new to-do", 
   "description":  "Finish my to-do",
-  "deadline":     "20/05/2021",
+  "deadline":     "2021-05-20T09:30:00",
   "important":    true
 }
 ```
@@ -52,4 +52,4 @@ Port 22 allowed for connection from administration IP address
 * monitor
 ![PM2 Running 2](./config/PM2_running_monit.png)  
 5. Deployment
-#### http://carlandescape.tk
+### http://carlandescape.tk
