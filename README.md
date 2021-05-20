@@ -16,9 +16,7 @@ Updated: 14/05/2021
 ### `npm run test`
 
 ## Description
-* Express server listening to requests on port 3000.
-
-1. Express application to manage a TODO list.
+* Application to manage a to-do list running on an Express server which listens to requests on port 3000.
 
 | Endpoint | Method | Description |
 |-|-|-|
@@ -27,13 +25,12 @@ Updated: 14/05/2021
 | /todos/:id | PUT |
 | /todos/:id | DELETE |
 
-* Good usage of REST will be evaluated
-
+### Configuration
 The application is deployed in an AWS EC2 instance using PM2 and NGINX as reverse proxy:
 
 2. Security Group:  
-Allow PORTS: 443 & 80 for connection from 0.0.0.0  
-Allow PORT 22 for for connection from your IP address  
+Ports 443 & 80 allowed for connection from 0.0.0.0  
+Port 22 allowed for connection from administration IP address
 ![Security Group](./config/SecurityGroup.png)  
 
 3. Proxypass NGINX configuration:
@@ -45,6 +42,10 @@ Allow PORT 22 for for connection from your IP address
 ![PM2 Running 1](./config/PM2_running_list.png)  
 * monitor
 ![PM2 Running 2](./config/PM2_running_monit.png)  
-5. 
-### Public IP Address: http://3.130.206.155:3000/
-### Domain: http://carlandescape.tk
+5. Deployment
+#### http://carlandescape.tk
+
+Notes:
+
+Your node.js application should not be directly accesible via port 3000. Nginx should take the HTTP requests and transfer them to the node app.
+You are posting some sensitive data, like the IP address of your router

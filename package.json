@@ -4,9 +4,9 @@
   "description": "Basic To Do List API using an Express Server",
   "main": "ExpressServer.js",
   "scripts": {
-    "test": "npx nodemon ExpressServer.js",
-    "start": "pm2 start ExpressServer.js",
-    "stop": "pm2 stop ExpressServer.js"
+    "test": "npx nodemon ./src/ExpressServer.js",
+    "start": "pm2 start ./src/ExpressServer.js",
+    "stop": "pm2 stop ./src/ExpressServer.js"
   },
   "repository": {
     "type": "git",
@@ -23,7 +23,8 @@
   },
   "homepage": "https://github.com/CarlosAEC-KS/ToDoListAPI#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "mongoose": "^5.12.10"
   },
   "devDependencies": {
     "nodemon": "^2.0.7"
