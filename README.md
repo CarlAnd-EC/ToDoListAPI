@@ -20,11 +20,20 @@ Updated: 14/05/2021
 
 | Endpoint | Method | Description |
 |-|-|-|
-| /todos | GET |
-| /todos | POST |
-| /todos/:id | PUT |
-| /todos/:id | DELETE |
+| /todos | GET | Retrieves all to-do entries stored in the database.|
+| /todos | POST | Adds a new to-do|
+| /todos/:id | PUT | Updates the information of the specified to-do.|
+| /todos/:id | DELETE | Deletes the specified to-do.|
 
+Example of entry in JSON format:  
+```json
+{
+  "title":        "My new to-do", 
+  "description":  "Finish my to-do",
+  "deadline":     "20/05/2021",
+  "important":    true
+}
+```
 ### Configuration
 The application is deployed in an AWS EC2 instance using PM2 and NGINX as reverse proxy:
 
@@ -44,8 +53,3 @@ Port 22 allowed for connection from administration IP address
 ![PM2 Running 2](./config/PM2_running_monit.png)  
 5. Deployment
 #### http://carlandescape.tk
-
-Notes:
-
-Your node.js application should not be directly accesible via port 3000. Nginx should take the HTTP requests and transfer them to the node app.
-You are posting some sensitive data, like the IP address of your router
